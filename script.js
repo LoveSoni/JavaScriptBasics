@@ -40,5 +40,37 @@ newAge = 26;
 console.log(newAge);
 
 const birthyear = 4;
-birthyear = 25;
+// birthyear = 25; this is not possible
 console.log(birthyear);
+
+
+
+// Operators
+// 1. Arithmetic Operator
+const ageLove = 2023 - 1997
+console.log(ageLove);
+console.log(ageLove * 2, ageLove / 2, ageLove % 2);
+
+const fName = "love"
+const lName = "."
+console.log(fName + " " + lName)
+
+//Assignment Operator
+let x = 10 + 5;
+console.log(x);
+x += 10;
+console.log(x);
+console.log(x *= 10);
+console.log(x -= 10);
+
+x++
+console.log(x);
+x--
+console.log(x);
+
+// Relationa operator
+let number1 = 10;
+let number2 = 20;
+console.log(number1 > number2);
+console.log(number1 < number2);
+console.log(number1 >= number2);
