@@ -28,3 +28,17 @@ console.log(typeof undefVariable);
 
 
 console.log(typeof null);
+
+
+// let const and var
+let age = 30;
+age = 25;
+console.log(age);
+
+var newAge = 25;
+newAge = 26;
+console.log(newAge);
+
+const birthyear = 4;
+birthyear = 25;
+console.log(birthyear);
