@@ -137,3 +137,22 @@ if (myAge == '18')
 // console.log(userInput);
 // if (userInput === 'good')
 //     alert("Ah! I see");
+
+// Logical Operator
+const hasDriversLicense = true;
+const hasGoodVision = false;
+
+console.log(hasDriversLicense && hasGoodVision);
+console.log(hasDriversLicense || hasGoodVision);
+console.log(!hasDriversLicense);
+
+const shouldDriver = hasDriversLicense && hasGoodVision;
+if (shouldDriver) {
+    console.log("She is eligible to drive");
+}
+else {
+    console.log("she can't driver");
+}
+
+const isTired = true;
+console.log(hasDriversLicense || hasGoodVision || isTired);
