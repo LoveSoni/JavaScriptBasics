@@ -90,3 +90,15 @@ if (isOldEnough) {
 }
 else { console.log("not allowed") }
 
+
+// type conversion
+//string to number
+const inputYear = "19997"
+console.log(Number(inputYear))
+console.log(Number(inputYear) + 18);
+
+
+console.log(Number('hello'));
+
+// number to string
+
