@@ -74,3 +74,9 @@ let number2 = 20;
 console.log(number1 > number2);
 console.log(number1 < number2);
 console.log(number1 >= number2);
+
+
+//string literal
+
+const newText = `hii my name is ${number1}`;
+console.log(newText);
