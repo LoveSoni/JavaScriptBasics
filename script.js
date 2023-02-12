@@ -80,3 +80,13 @@ console.log(number1 >= number2);
 
 const newText = `hii my name is ${number1}`;
 console.log(newText);
+
+// if else
+const driverAge = 9;
+const isOldEnough = (driverAge >= 18);
+console.log(isOldEnough)
+if (isOldEnough) {
+    console.log('allowed');
+}
+else { console.log("not allowed") }
+
