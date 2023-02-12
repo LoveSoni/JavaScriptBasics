@@ -101,4 +101,10 @@ console.log(Number(inputYear) + 18);
 console.log(Number('hello'));
 
 // number to string
+console.log(String(23));
 
+
+// type coercion
+console.log('I am ' + 24 + "years old");
+console.log('23' - '10' - 3);
+console.log('23' * '2');
