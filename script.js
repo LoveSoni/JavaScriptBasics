@@ -156,3 +156,26 @@ else {
 
 const isTired = true;
 console.log(hasDriversLicense || hasGoodVision || isTired);
+
+// switch statement
+const day = 'tuesday'
+switch (day) {
+    case "monday":
+        console.log("Today is monday");
+        break;
+    case "tuesday":
+        console.log("Today is tuesday");
+        break;
+    case "wednesday":
+        console.log("Today is wednesday");
+        break;
+    case "thursday":
+        console.log("today is thursday");
+        break;
+    case "friday":
+        console.log("today is friday");
+        break;
+    default:
+        console.log("nope");
+}
+
