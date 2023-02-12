@@ -108,3 +108,15 @@ console.log(String(23));
 console.log('I am ' + 24 + "years old");
 console.log('23' - '10' - 3);
 console.log('23' * '2');
+
+//Truthy and falsy values
+// 5 falsy values: 0 '' null NAN undefined
+console.log(Boolean(0));
+console.log(Boolean(null));
+console.log(Boolean(''));
+console.log(Boolean(NaN));
+console.log(Boolean(undefined))
+console.log(Boolean(true))
+console.log(Boolean(-10));
+console.log(Boolean('%@#$ASF'))
+console.log(Boolean(123));
