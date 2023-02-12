@@ -120,3 +120,20 @@ console.log(Boolean(true))
 console.log(Boolean(-10));
 console.log(Boolean('%@#$ASF'))
 console.log(Boolean(123));
+
+// Equality Operator
+// ==       ===
+const myAge = 18;
+if (myAge === 18)
+    console.log('age is equaly to 18');
+
+console.log('18' == 18);
+
+if (myAge == '18')
+    console.log('age is equaly to 18');
+
+// Prompt and alert on webpage
+// const userInput = prompt('Hey bro! how are you doing');
+// console.log(userInput);
+// if (userInput === 'good')
+//     alert("Ah! I see");
