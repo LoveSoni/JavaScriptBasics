@@ -179,3 +179,6 @@ switch (day) {
         console.log("nope");
 }
 
+// Ternary operator
+const agee = 23;
+age >= 18 ? console.log('i like to drink mocktails') : console.log('You should not consume alhocal');
