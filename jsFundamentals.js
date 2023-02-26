@@ -108,3 +108,14 @@ console.log(myArray.indexOf('mike'));
 // check if elements is arrays or not
 console.log(myArray.includes("mike"));
 console.log(myArray.includes("love"));
+
+
+// Objects
+const me = {
+    firstName: 'Love',
+    age: 24,
+    job: "tester",
+};
+console.log(me);
+console.log(me.age);
+console.log(me['age']);
