@@ -80,3 +80,11 @@ console.log(years.length);
 
 const love = ['love', 'lastname', 2023 - 1997];
 console.log(love);
+
+
+
+//Array Methods
+
+const myArray = ['love', "peter", 'thomas'];
+myArray.push('mike');
+console.log(myArray);
