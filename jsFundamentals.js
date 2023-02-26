@@ -85,6 +85,26 @@ console.log(love);
 
 //Array Methods
 
+//add element at the end
 const myArray = ['love', "peter", 'thomas'];
 myArray.push('mike');
 console.log(myArray);
+
+// add element in beginning
+myArray.unshift('newfriend');
+console.log(myArray);
+
+// remove elements from end
+myArray.pop();
+console.log(myArray);
+
+// remove element from start
+myArray.shift();
+console.log(myArray);
+
+// find index of specific element
+console.log(myArray.indexOf('mike'));
+
+// check if elements is arrays or not
+console.log(myArray.includes("mike"));
+console.log(myArray.includes("love"));
