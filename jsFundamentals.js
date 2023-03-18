@@ -119,3 +119,10 @@ const me = {
 console.log(me);
 console.log(me.age);
 console.log(me['age']);
+
+const mySelf = {
+    firstName: "love",
+    married: false,
+    friends: ['mark', 'john']
+}
+console.log(mySelf);
