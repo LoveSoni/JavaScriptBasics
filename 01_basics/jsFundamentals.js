@@ -122,7 +122,40 @@ console.log(me['age']);
 
 const mySelf = {
     firstName: "love",
+    birthYear: 1997,
     married: false,
-    friends: ['mark', 'john']
+    friends: ['mark', 'john'],
+    calcAge: function (birthYear) {
+        return 2023 - birthYear;
+    }
 }
+console.log("Age is " + mySelf.calcAge(mySelf.birthYear));
 console.log(mySelf);
+
+
+const mark = {
+    fullName: "Mark Miller",
+    mass: 78,
+    height: 1.69,
+    calcBMI: function () {
+        this.bmi = this.mass / this.height ** 2;
+        return this.bmi;
+    }
+}
+const john = {
+    fullName: "John Smith",
+    mass: 92,
+    height: 1.95,
+    calcBMI: function () {
+        this.bmi = this.mass / this.height ** 2;
+        return this.bmi;
+    }
+}
+
+console.log(mark.bmi);
+if (mark.bmi < john.bmi) {
+    console.log(`${mark.bmi} BMI`);
+}
+else if (mark.bmi > john.bmi) {
+    console.log(`${john.bmi} BMI`);
+}
