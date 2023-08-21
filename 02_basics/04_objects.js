@@ -74,3 +74,14 @@ console.log(Object.entries(object1));
 
 // check of object has some key or not
 console.log(object3.hasOwnProperty("id"));
+
+
+// Object de-structure
+const course = {
+    name: "js",
+    price: 999,
+    courseInstructor: "Hitesh"
+}
+
+const { courseInstructor: instructor } = course;
+console.log(instructor);
