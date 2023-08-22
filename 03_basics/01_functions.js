@@ -24,3 +24,33 @@ function logInUserMessage(username = "noname") { // we can also define default v
 console.log(logInUserMessage('love'));
 // lets say if we don't have passed anything in the function
 console.log(logInUserMessage());// thn we'll get "undefined just loggedin"
+
+
+
+function addToCart(...num1) { // rest operator can take any number of arguments
+    return num1;
+}
+
+console.log(addToCart(100, 200, 300));
+
+// pass object to function
+const user = {
+    username: "love",
+    email: "love.love@test.com"
+}
+
+function handleCustomObject(customObject) {
+    console.log(`username is ${customObject.username} and email is ${customObject.email}`)
+}
+
+handleCustomObject(user);
+handleCustomObject({ user: "peter", email: "peter@google.com" });
+
+// pass array to function
+
+const array1 = [2, 3, 4, 5];
+function count(numberArray) {
+    return numberArray[2];
+}
+
+console.log(count(array1));
