@@ -12,11 +12,3 @@ const greetings = "hello world";
 for (const greet of greetings) {
     console.log(greet);
 }
-
-for (const key in myArray) {
-    console.log(key)
-}
-
-myArray.forEach(element => {
-    console.log(element)
-});
