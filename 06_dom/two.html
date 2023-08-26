@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Add/Remoe Element</title>
+    <style>
+    </style>
+</head>
+
+<body>
+    <div class="root">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+    const parentElement = document.querySelector('.root');
+    console.log(parentElement);
+    // switch to child element from parent
+    console.log(parentElement.children);
+    console.log(parentElement.children[1].innerText);
+    console.log('printing all values')
+    for (let index = 0; index < parentElement.children.length; index++) {
+        const text = parentElement.children[index].innerHTML;
+        console.log(text);
+    }
+    // change styling
+    parentElement.children[1].style.color = 'green';
+    console.log(parentElement.firstElementChild);
+    console.log(parentElement.lastElementChild);
+
+    // switch to parent form child
+    console.log("******************")
+    const childElement = document.querySelector('.day');
+    console.log(childElement);
+    const parentSwitch = childElement.parentElement;
+    console.log(parentSwitch);
+
+    // switch to sibling
+    console.log("******************")
+    const myChildElement = document.querySelector(".day");
+    console.log(myChildElement.nextElementSibling);
+
+    console.log("Nodes: ", parentElement.childNodes);
+</script>
+
+
+
+</html>
