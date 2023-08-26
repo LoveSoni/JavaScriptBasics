@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM|Edit Remote Element</title>
+</head>
+
+<body>
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    function createListItem(itemName) {
+        const langList = document.querySelector('.language');
+        console.log(langList);
+        const newItem = document.createElement("li");
+        newItem.appendChild(document.createTextNode(itemName));
+        console.log(newItem);
+        langList.appendChild(newItem);
+    }
+    createListItem('java');
+    createListItem('python');
+
+    function createListItemOptimizedWay(itemname) {
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(itemname));
+        document.querySelector('.language').appendChild(li);
+    }
+
+    createListItemOptimizedWay('typscript');
+
+    // Edit element
+    const secondLag = document.querySelector('li:nth-child(2)');
+    console.log(secondLag);
+    secondLag.innerHTML = 'javaa'
+    // replace existing list
+    const newli = document.createElement('li');
+    newli.textContent = "Mojo";
+    secondLag.replaceWith(newli);
+
+    // edit another example
+    console.log('another example');
+    const secLang = document.querySelector('li:first-child');
+    console.log(secLang);
+    secLang.outerHTML = '<li>Javascriptt</li>'
+
+
+    // remove element
+    const lastLang = document.querySelector('li:last-child');
+    console.log(lastLang);
+    lastLang.remove();
+</script>
+
+</html>
