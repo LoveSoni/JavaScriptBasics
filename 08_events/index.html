@@ -92,23 +92,30 @@
 
     // stop event propogation
 
-    const ulImage = document.querySelector('#images');
-    ulImage.addEventListener('click', (event) => {
-        console.log("ul images clicked");
-        event.stopPropagation();
-    })
-    const ownImage = document.querySelector("#owl")
-    owlImage.addEventListener('click', (event) => {
-        console.log("owl images clicked");
-        event.stopPropagation();
-    });
+    // const ulImage = document.querySelector('#images');
+    // ulImage.addEventListener('click', (event) => {
+    //     console.log("ul images clicked");
+    //     event.stopPropagation();
+    // })
+    // const ownImage = document.querySelector("#owl")
+    // owlImage.addEventListener('click', (event) => {
+    //     console.log("owl images clicked");
+    //     event.stopPropagation();
+    // });
 
-    const googleElement = document.querySelector("#google");
-    googleElement.addEventListener('click', (event => {
-        console.log('google');
-        event.stopPropagation();
-        event.preventDefault();
-    }))
+    // const googleElement = document.querySelector("#google");
+    // googleElement.addEventListener('click', (event => {
+    //     console.log('google');
+    //     event.stopPropagation();
+    //     event.preventDefault();
+    // }))
+
+    const ulList = document.querySelector('#images');
+    ulList.addEventListener('click', (event) => {
+        console.log(event.target.parentNode);
+        event.target.parentNode.remove();
+        // document.getElementById(`${event.target.parentNode}`).remove();
+    })
 </script>
 
 </html>
