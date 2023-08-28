@@ -21,7 +21,15 @@
         const h1Tag = document.querySelector('h1');
         h1Tag.innerHTML = 'text changed by js';
     }
-    setTimeout(changeText, 3000);
+    const changeMe = setTimeout(changeText, 3000);
+
+    const stopButton = document.querySelector('#stop');
+    console.log(stopButton);
+    stopButton.addEventListener('click', () => {
+        clearTimeout(changeMe);
+        console.log('stopped');
+    })
+
 </script>
 
 </html>
