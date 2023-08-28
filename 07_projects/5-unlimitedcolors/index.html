@@ -21,13 +21,17 @@
     // 
     startButton.addEventListener('click', (event) => {
         console.log('start button clicked');
-        colorChanger = setInterval(() => {
-            document.querySelector('body').style.backgroundColor = randomColor();
-        }, 1000);
-    })
+        if (!colorChanger) {
+            colorChanger = setInterval(() => {
+                document.querySelector('body').style.backgroundColor = randomColor();
+            }, 1000);
+        }
+    }
+    )
     stopButton.addEventListener('click', (event) => {
         console.log('stop button clicked');
         clearInterval(colorChanger);
+        colorChanger = null;
     })
 
     // generate a random number
