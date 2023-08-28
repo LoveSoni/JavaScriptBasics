@@ -17,7 +17,11 @@
     setTimeout(function () {
         console.log('love')
     }, 3000);
-    set
+    const changeText = function () {
+        const h1Tag = document.querySelector('h1');
+        h1Tag.innerHTML = 'text changed by js';
+    }
+    setTimeout(changeText, 3000);
 </script>
 
 </html>
