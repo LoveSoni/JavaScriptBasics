@@ -58,3 +58,28 @@ promise4.then(function (user) {
 }).finally(() => {
     console.log('finally the promise is resolved/rejected')
 })
+
+
+// async wait 
+const promise5 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        let error = true;
+        if (!error) {
+            resolve({ username: 'love', pass: '123' });
+        }
+        else {
+            reject('Error: credentials went wrong');
+        }
+    }, 1000);
+});
+
+
+(async function consumePromise5() {
+    try {
+        const promiseResponse = await promise5;
+        console.log('from await', promiseResponse);
+        // with async await we've to handle the exception
+    } catch (error) {
+        console.log(error);
+    }
+})();
