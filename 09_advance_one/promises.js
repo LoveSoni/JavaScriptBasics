@@ -32,3 +32,27 @@ const promise3 = new Promise(function (resolve, reject) {
 promise3.then(function (msg) {
     console.log(msg);
 });
+
+
+
+// promise  on based on error
+const promise4 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        let error = true;
+        if (!error) {
+            resolve({ username: 'love' });
+        }
+        else {
+            reject('Error: something went wrong');
+        }
+    }, 1000);
+})
+
+promise4.then(function (user) {
+    console.log(user);
+    return user['username'];
+}).then((username) => {
+    console.log(username);
+}).catch((error) => {
+    console.log(error);
+})
