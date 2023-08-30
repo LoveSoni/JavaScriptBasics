@@ -3,15 +3,16 @@
 let myName = new String('love    ');
 console.log(myName.length);
 // here the length is 8 because it will also includes white space
-
 // but i want a true lenght property
 
 
 // myName.prototype.findTrueLength = 'hi'
-
-
-
 // note:This example also shows how to bakedin cutom properties in the prototype
+
+Object.prototype.trueLength = function () {
+    return 'true length is ' + this.trim().length;
+}
+console.log(myName.trueLength());
 
 
 
