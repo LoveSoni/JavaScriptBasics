@@ -1,0 +1,4 @@
+Question: Does js supports classes
+Answer: Yes, js support classes. This feature was introcued with the ECMAScript 2015 specification (often referred to as ES6)
+However, it is important to note that JS primarily a prototype based language(programming paradigm), and its classes are primarily syntatic sugarover existing prototype-based ineritance mechanism
+In another words, it provides a more familiar syntax for developers coming from class-based languages such as java or c++, but under hood it works somewhat differently
