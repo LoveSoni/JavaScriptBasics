@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+</head>
+
+<body>
+    <button>Button clicked</button>
+</body>
+
+<script>
+    class React {
+        constructor() {
+            this.library = "React";
+            this.server = "Server started at Localhost:5555"
+
+            // requirement: 
+            // as soon as this page is load
+
+            document.querySelector('button').addEventListener('click', this.handleClick.bind(this));
+        }
+        handleClick() {
+            console.log('button is clicked');
+            console.log(this.server);
+            console.log(this.library);
+        }
+    }
+    const app = new React();
+</script>
+
+</html>
