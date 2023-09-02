@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure</title>
+</head>
+
+<body>
+    <button id="green">Green</button>
+    <button id="orange">Orange</button:orange>
+</body>
+
+<script>
+
+    // lexical scoping
+    function init() {
+        let name = 'chrome'; // name is a local variable created by init
+        function displayName() {
+            // dispay name is the inner function , that forms the closure
+            console.log(name); // use variable declared in the parent function
+            let innerVariable = 'variable'
+        }
+        // console.log(innerVariable); this is not allowed
+        displayName();
+    }
+    init();
+    function outer() {
+        let username = 'love'
+    }
+    // console.log(username); // it not accessible as username declared inside username
+
+    // closure example
+
+    console.log("<<<<<<<<<<<<<Closure example");
+    function myFunc() {
+        let name = 'chrome';
+        function displayName() {
+            console.log(name);
+        }
+        return displayName;// here we are return displayName methdo reference
+        // but internally it using name property from the myFunc method
+        // so with displayName myFunction property will also store in the memory
+    }
+    const output = myFunc();// here after calling myFunction scope is removed from the stack trace
+    // but its memory will still be there  
+    output();
+</script>
+<script>
+    console.log('>>>>>>>>>>>>>>>>>>>>>>>>>')
+    console.log('New scope');
+    const greenBtn = document.getElementById('green');
+    const orangeBtn = window.document.getElementById('orange');
+    console.log(orangeBtn);
+    console.log(greenBtn);
+    // orangeBtn.addEventListener('click', (event) => {
+    //     document.body.style.backgroundColor = 'orange';
+    // })
+    // greenBtn.addEventListener('click', (event) => {
+    //     document.body.style.backgroundColor = 'green';
+    // })
+
+    // generic function to generate color
+
+    // function updateBackgroundColor(button, color) {
+    //     button.addEventListener('click', (event) => {
+    //         console.log('button clicked')
+    //         document.body.style.backgroundColor = color;
+    //     })
+    // }
+    // updateBackgroundColor(greenBtn, "green");
+    // updateBackgroundColor(orangeBtn, 'orange');
+
+    // closure problem and solution
+    // greenBtn.onclick = function (event) {
+    //     document.body.style.backgroundColor = 'green'
+    // }
+    // orangeBtn.onclick = function (event) {
+    //     document.body.style.backgroundColor = 'orange'
+    // }
+
+    // now lets make it generic
+    // function changeColor(color) {
+    //     document.body.style.backgroundColor = color;
+    // }
+    // greenBtn.onclick = changeColor('green');
+    // orangeBtn.onclick = changeColor('orange');
+
+    // note : if we define above function like this then in line number 88 it will directly get executed instead of onclick
+    // so we have to define the inner function which will return us the reference
+    function changeColor(color) {
+        return function doWork() {
+            document.body.style.backgroundColor = color;
+        }
+    }
+    greenBtn.onclick = changeColor('green');
+    orangeBtn.onclick = changeColor('orange');
+</script>
+
+</html>
